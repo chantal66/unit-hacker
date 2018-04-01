@@ -1,9 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app to main purpose is to tracking tool for status and construction details for apartment units.
 
-Things you may want to cover:
+# Stack
+
 
 * Ruby version
 
@@ -21,4 +21,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+# Todo's
+>* setup devise login as root
