@@ -1,0 +1,18 @@
+language: ruby
+rvm: 2.4.1
+before_script:
+- bundle exec rake db:create -all
+- bundle exec rake db:migrate
+script:
+- bundle exec rake ci:tests
+services:
+- postgresql
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: Scwj+J3FrblzYNaMQizJGGrxlxMHKT7pTxSi/785VlLpJzA8xcQaZAvlbZGd6c6Pl9YLP0giH+JxlDJLoQe0gAfpEFVtEmhl4oHve1u9orfpNx+JQC3ywu2pH6v1Mn0xeqky9AXIsMIY+5iDSM6RKFGrxbaFDFD4QNqgcKCz7GZrE3604rK72pLo8aUjQRMPzi1aWF3zjZkkism3uoSXdcxFQViSosFyclC66XhIplAd6cpZmCtZUtfKzGZO2+WXYtABKYn7huMTY9QCUoiRW7MaD7IaiQIk4herMn9gGGb8pmHjg6eLSVKN05aR3QthKPf9DWhvRRCVpy1aVzc0nztwi3fHL3hIQJlBfMa0jKqsn6jOFOIiNDgBTZyVroHQwijNK4CjYAnM3Ng2eR/U9TfeGFBKT+fO3R4E/n8tH646iGtclyNf/lIUPIlbdA/DotQ/DeceL60TO5jFXxiZ/GUNSnlwh6Wuj6jycXgDtKdAHdr0tc4us3JNeNXpC8mcLBE4zpddbx1tcIU1QfGRik44zAPrVhm6Y+7RxEQA78YzkuNy/BLOdWhLcaz28jOAq8scDyMCIV8NKj8oOKX9VUCvjlftXwUZ0djL/Sb6yAHJ26QN2vYT6W9TP4j+DWTXMwTUaYBYHwVhe+dIX7NWn1XNgyYTM3r97sZ66IM9Vl4=
+  on: unit-hacker
+  run:
+    - 'rails db:migrate'
