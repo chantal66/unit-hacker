@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem 'jquery-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use rails_12factor gem made by Heroku to make tweaks to your app for deployment on their platform.
@@ -34,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 4.2'
 
 group :development, :test do
