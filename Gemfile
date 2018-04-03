@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capybara'
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'
   gem "factory_bot_rails", "~> 4.0"

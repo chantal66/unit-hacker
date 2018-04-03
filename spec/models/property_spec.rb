@@ -16,4 +16,12 @@ RSpec.describe Property, type: :model do
       expect(property).to be_valid
     end
   end
+
+  describe 'Relationships' do
+    it 'has many apartments' do
+      property = Property.new(name: 'Greenwood')
+
+      expect(property).to respond_to(:apartments)
+    end
+  end
 end
