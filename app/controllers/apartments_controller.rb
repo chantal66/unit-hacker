@@ -5,11 +5,12 @@ class ApartmentsController < ApplicationController
   def index
     @apartments = @property.apartments
   end
+
+  private
+
+  def set_property
+    @property = Property.find(params[:property_id])
+  end
 end
 
 
-private
-
-def set_property
-  @property = Property.find(params[:property_id])
-end
