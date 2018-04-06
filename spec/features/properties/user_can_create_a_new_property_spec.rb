@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 describe 'creation' do
+  before  do
+    @user = FactoryBot.create(:user)
+    login_as(@user, :scope => :user)
+  end
+
   describe 'new' do
     it 'has a link from index' do
       visit properties_path
