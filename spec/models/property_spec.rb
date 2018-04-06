@@ -27,10 +27,16 @@ RSpec.describe Property, type: :model do
   end
 
   describe 'Relationships' do
-    it 'has many apartments' do
-      property = Property.new(name: 'Greenwood')
+    before do
+      @property = Property.new(name: 'Greenwood')
+    end
 
-      expect(property).to respond_to(:apartments)
+    it 'has many apartments' do
+      expect(@property).to respond_to(:apartments)
+    end
+
+    it 'belongs to a user' do
+      expect(@property).to respond_to(:user)
     end
   end
 end
