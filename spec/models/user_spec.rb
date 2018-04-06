@@ -18,4 +18,10 @@ RSpec.describe User, type: :model do
       expect(@user).to be_invalid
     end
   end
+
+  describe  'relationship' do
+    it 'has many properties' do
+      expect(@user).to respond_to(:properties)
+    end
+  end
 end
