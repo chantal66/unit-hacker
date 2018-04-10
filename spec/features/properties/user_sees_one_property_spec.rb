@@ -7,7 +7,6 @@ describe 'User sees one company' do
   end
 
   it 'Show' do
-    # binding.pry
     property = Property.create!(name: 'Greenwood Village', user_id: @user.id)
     property.apartments.create!(unit_number: '101', baths: '2', beds: '2')
 
