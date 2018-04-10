@@ -4,6 +4,6 @@
 
 <ul>
 <% @properties.each do |property| %>
-  <li><%= property.name %></li>
+  <li><%= property.name %> <%= link_to 'Delete', property_path(property), method: 'delete' %></li>
 <% end %>
 </ul>
