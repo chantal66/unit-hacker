@@ -12,7 +12,7 @@ describe 'User can delete a property' do
       visit properties_path
       click_link 'Delete'
 
-      expect(page).to have_content("#{@property.name} was succesfully deleted")
+      expect(page.status_code).to eq(200)
     end
   end
 end

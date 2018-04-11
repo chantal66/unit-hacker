@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: [:show]
+  before_action :set_property, only: [:show, :edit, :update, :destroy]
 
   def index
     @properties = Property.all
@@ -9,12 +9,15 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
+  def edit
+  end
+
   def create
     @property = Property.new(properties_params)
     @property.user_id = current_user.id
 
     if @property.save
-      redirect_to @property, notice: 'Your Property was succesfully created'
+      redirect_to @property, notice: "#{@property.name} was succesfully created"
     else
       render :new
     end
@@ -24,6 +27,20 @@ class PropertiesController < ApplicationController
     redirect_to property_apartments_path(@property)
   end
 
+  def update
+    if @property.update(properties_params)
+      redirect_to property_path(@property), notice: "Your #{@property.name} has been updated successfyully"
+
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @property.delete
+    redirect_to properties_path, notice: "#{@property.name} was succesfully deleted"
+
+  end
   private
 
   def set_property
