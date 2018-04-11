@@ -16,7 +16,7 @@
       <div class="media-body pb-3 mb-0 small lh-125 border-gray">
         <% @properties.each do |property| %>
           <div class="property-name border-bottom">
-            <strong><%= property.name %></strong>
+            <strong><%= link_to property.name, property_path(property) %></strong>
             <%= link_to 'Delete', property_path(property), method: 'delete', class: 'btn btn-danger btn-xs pull-right' %>
             <%= link_to 'Edit', edit_property_path(property), class: 'btn btn-warning btn-xs pull-right' %>
           </div>
