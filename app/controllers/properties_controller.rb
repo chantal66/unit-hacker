@@ -17,7 +17,7 @@ class PropertiesController < ApplicationController
     @property.user_id = current_user.id
 
     if @property.save
-      redirect_to @property, notice: 'Your Property was succesfully created'
+      redirect_to @property, notice: "#{@property.name} was succesfully created"
     else
       render :new
     end
@@ -29,8 +29,8 @@ class PropertiesController < ApplicationController
 
   def update
     if @property.update(properties_params)
-      flash[:success] = "Your #{@property.name} has been updated successfyully"
-      redirect_to property_path(@property)
+      redirect_to property_path(@property), notice: "Your #{@property.name} has been updated successfyully"
+
     else
       render :edit
     end
@@ -38,8 +38,8 @@ class PropertiesController < ApplicationController
 
   def destroy
     @property.delete
-    flash[:success] = "#{@property.name} was succesfully deleted"
-    redirect_to properties_path
+    redirect_to properties_path, notice: "#{@property.name} was succesfully deleted"
+
   end
   private
 

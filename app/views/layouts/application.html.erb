@@ -9,9 +9,11 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
-    <% end %>
+    <%# flash.each do |name, msg| %>
+      <%#= content_tag :div, msg, class: name %>
+    <%# end %>
     <%= yield %>
+
+    <%= js add_gritter(flash[:notice], title: "Unit Tracker Notification", sticky: false) %>
   </body>
 </html>
