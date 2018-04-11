@@ -1,0 +1,40 @@
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+.property-name {
+    font-size: 18px;
+    color: grey;
+}
+
+.properties.box-shadow {
+    border-radius: 5px;
+}
+
+a.btn.btn-default.add-new {
+    background-color: #007bff;
+    border: 1px solid transparent;
+    color: white;
+}
+
+.btn-xs {
+    margin: 3px;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 8px;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.p-3 { padding: 1rem !important; }
+
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
