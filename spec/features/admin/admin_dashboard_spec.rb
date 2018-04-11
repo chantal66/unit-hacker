@@ -21,4 +21,13 @@ describe  'Admin Dashboard' do
 
     expect(current_path).to eq(properties_path)
   end
+
+  it 'can be reached by admin users' do
+    admin_user = FactoryBot.create(:admin_user)
+    login_as(admin_user, :scope => :user)
+
+    visit admin_root_path
+
+    expect(current_path).to eq(admin_root_path)
+  end
 end
