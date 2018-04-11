@@ -11,6 +11,6 @@
   <body>
     <%= yield %>
 
-    <%= js add_gritter(flash[:notice], title: "Unit Tracker Notification", sticky: false) %>
+    <%= render 'shared/alerts' %>
   </body>
 </html>
