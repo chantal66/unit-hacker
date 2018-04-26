@@ -1,4 +1,41 @@
-<h2>All Apartments from <%= @property.name %></h2>
 
-<p><%= @apartments.inspect %></p>
-
+<div class="container-fluid">
+  <div class="row">
+<h3>All Apartments from <%= @property.name %></h3>
+    <div class="col-md-12">
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+          <th>
+            Unit Number
+          </th>
+          <th>
+            Beds
+          </th>
+          <th>
+            Baths
+          </th>
+          <th>
+            Unit Location
+          </th>
+          <th>
+            Garage
+          </th>
+          <th>
+            Garage Number
+          </th>
+          <th>
+            Renovation type
+          </th>
+          <th>
+            Floor Plan
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+          <%= render @apartments %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
