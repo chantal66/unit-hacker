@@ -34,7 +34,7 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:unit_number, :beds, :baths, :unit_location, :garage, :garage_number, :renovation_type)
+    params.require(:apartment).permit(:unit_number, :beds, :baths, :unit_location, :garage, :garage_number, :renovation_type, :floor_plan)
   end
 end
 

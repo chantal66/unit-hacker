@@ -16,20 +16,20 @@ describe  'New' do
     fill_in 'apartment[unit_number]', with: '102'
     fill_in 'apartment[beds]', with: '2'
     fill_in 'apartment[baths]', with: '1'
-    fill_in 'apartment[unit_location]', with: 'garden'
-    fill_in 'apartment[garage]', with: 'yes'
+    select 'Garden', from: 'apartment[unit_location]'
+    select 'yes', from: 'apartment[garage]'
     fill_in 'apartment[garage_number]', with: '10'
-    fill_in 'apartment[renovation_type]', with: 'full'
+    select  'Full', from:  'apartment[renovation_type]'
     click_button 'Save'
 
     expect(current_path).to eq("/properties/#{@property.id}/apartments/#{Apartment.last.id}")
     expect(page).to have_content('102')
     expect(page).to have_content('2')
     expect(page).to have_content('1')
-    expect(page).to have_content('garden')
+    expect(page).to have_content('Garden')
     expect(page).to have_content('true')
     expect(page).to have_content('10')
-    expect(page).to have_content('full')
+    expect(page).to have_content('Full')
   end
 end
 
