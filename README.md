@@ -27,3 +27,4 @@ Tracking tool for status and construction details for apartment units.
 >* setup devise login as root
 >* Import excel files to display in all properties
 >* Apartments CRUD
+>* Add option for adding floorplan with pdf, jpeg.
