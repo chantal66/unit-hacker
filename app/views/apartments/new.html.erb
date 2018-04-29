@@ -6,25 +6,25 @@
   <% end %>
   <div class="form-group">
     <%= f.label :unit_number, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :unit_number, class: 'form-control' %>
+    <%= f.number_field :unit_number, class: 'form-control' %>
 
     <%= f.label :beds, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :beds, class: 'form-control' %>
+    <%= f.number_field :beds, class: 'form-control' %>
 
     <%= f.label :baths, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :baths, class: 'form-control' %>
+    <%= f.number_field :baths, class: 'form-control' %>
 
     <%= f.label :unit_location, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :unit_location, class: 'form-control' %>
+    <%= f.select :unit_location, options_for_select(['Garden', 'Ground', 'Upper']),{} , class: 'form-control' %>
 
     <%= f.label :garage, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :garage, class: 'form-control' %>
+    <%= f.select :garage, options_for_select(['yes', 'no']),{}, class: 'form-control' %>
 
     <%= f.label :garage_number, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :garage_number, class: 'form-control' %>
+    <%= f.number_field :garage_number, class: 'form-control' %>
 
     <%= f.label :renovation_type, class: 'col-sm-2 control-label' %>
-    <%= f.text_field :renovation_type, class: 'form-control' %>
+    <%= f.select :renovation_type, options_for_select(['Full', 'Partial']), {}, class: 'form-control' %>
   </div>
   <%= f.submit 'Save', class: 'btn btn-primary' %>
 <% end %>
