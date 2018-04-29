@@ -17,7 +17,7 @@ class ApartmentsController < ApplicationController
   def create
     @apartment = @property.apartments.new(apartment_params)
     if @apartment.save
-      redirect_to property_apartment_path(@property, @apartment), notice: "#{@apartment.unit_number} succesfully created}"
+      redirect_to property_apartment_path(@property, @apartment), notice: "#{@apartment.unit_number} succesfully created"
     else
       render :new
     end

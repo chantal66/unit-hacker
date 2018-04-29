@@ -1,1 +1,25 @@
-<%= @apartment.inspect %>
+<div class="container-fluid">
+  <div class="page-header">
+    <div class="btn-toolbar">
+      <%= link_to "Back to apartments at #{@property.name}", property_apartments_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-2">
+        <div class="list-group">
+          <ul class="col-md-8 list-unstyled">
+            <li class="list-group-item"><strong>Unit Number: </strong><%= @apartment.unit_number %></li>
+            <li class="list-group-item"><strong>Beds: </strong> <%= @apartment.beds %></li>
+            <li class="list-group-item"><strong>Baths: </strong> <%= @apartment.baths %></li>
+            <li class="list-group-item"><strong>Unit Location: </strong> <%= @apartment.unit_location %></li>
+            <li class="list-group-item"><strong>Garage: </strong> <%= @apartment.garage %></li>
+            <li class="list-group-item"><strong>Garage Number: </strong> <%= @apartment.garage_number %></li>
+            <li class="list-group-item"><strong>Renovation Type: </strong> <%= @apartment.renovation_type %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
