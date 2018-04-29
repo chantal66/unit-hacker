@@ -5,16 +5,16 @@ describe  'Edit' do
     user = FactoryBot.create(:user)
     login_as(user, :scope => :user)
     property = FactoryBot.create(:property)
-    FactoryBot.create(:apartment)
+    apartment = FactoryBot.create(:apartment)
 
 
-    visit edit_property_apartment_path(property)
+    visit edit_property_apartment_path(property, apartment)
 
     fill_in 'apartment[unit_number]', with: '102'
     fill_in 'apartment[beds]', with: '2'
     fill_in 'apartment[baths]', with: '2'
     select 'Ground', from: 'apartment[unit_location]'
-    select 'false', from: 'apartment[garage]'
+    select 'no', from: 'apartment[garage]'
     select  'Partial', from:  'apartment[renovation_type]'
     click_button 'Save'
 
@@ -23,7 +23,6 @@ describe  'Edit' do
     expect(page).to have_content('2')
     expect(page).to have_content('2')
     expect(page).to have_content('Ground')
-    expect(page).to have_content('false')
     expect(page).to have_content('Partial')
   end
 end

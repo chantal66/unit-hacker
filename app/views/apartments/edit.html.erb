@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="page-header">
-        <h3>New apartment</h3>
+        <h3>Editing apartment <%= @apartment.unit_number %> </h3>
         <div class="btn-toolbar">
           <%= link_to "Back to apartments at #{@property.name}", property_apartments_path, class: 'btn btn-default' %>
         </div>
@@ -11,3 +11,4 @@
     </div>
   </div>
 </div>
+

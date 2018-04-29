@@ -1,0 +1,33 @@
+<%= form_for [@property, @apartment], class: 'form-horizontal' do |f| %>
+  <% if @apartment.errors.any? %>
+    <% @apartment.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "Unit Tracker Notification", sticky: false) %>
+    <% end %>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :unit_number, class: 'col-sm-2 control-label' %>
+    <%= f.text_field :unit_number, class: 'form-control' %>
+
+    <%= f.label :beds, class: 'col-sm-2 control-label' %>
+    <%= f.number_field :beds, class: 'form-control' %>
+
+    <%= f.label :baths, class: 'col-sm-2 control-label' %>
+    <%= f.number_field :baths, class: 'form-control' %>
+
+    <%= f.label :unit_location, class: 'col-sm-2 control-label' %>
+    <%= f.select :unit_location, options_for_select(['Garden', 'Ground', 'Upper']),{} , class: 'form-control' %>
+
+    <%= f.label :garage, class: 'col-sm-2 control-label' %>
+    <%= f.select :garage, options_for_select(['yes', 'no']),{}, class: 'form-control' %>
+
+    <%= f.label :garage_number, class: 'col-sm-2 control-label' %>
+    <%= f.number_field :garage_number, class: 'form-control' %>
+
+    <%= f.label :renovation_type, class: 'col-sm-2 control-label' %>
+    <%= f.select :renovation_type, options_for_select(['Full', 'Partial']), {}, class: 'form-control' %>
+
+    <%= f.label :floor_plan, class: 'col-sm-2 control-label' %>
+    <%= f.text_field :floor_plan, class: 'form-control' %>
+  </div>
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+<% end %>

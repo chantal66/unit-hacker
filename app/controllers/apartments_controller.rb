@@ -1,7 +1,7 @@
 class ApartmentsController < ApplicationController
 
   before_action :set_property, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  before_action :set_apartment, only: [:show]
+  before_action :set_apartment, only: [:show, :edit, :update]
 
   def index
     @apartments = @property.apartments
@@ -14,12 +14,23 @@ class ApartmentsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def create
     @apartment = @property.apartments.new(apartment_params)
     if @apartment.save
       redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} succesfully created"
     else
       render :new
+    end
+  end
+
+  def update
+    if  @apartment.update(apartment_params)
+      redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} successfully updated"
+    else
+      render :edit
     end
   end
 
