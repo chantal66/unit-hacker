@@ -8,4 +8,5 @@
   <td><%= apartment.renovation_type %></td>
   <td><%= apartment.floor_plan %></td>
   <td><%= link_to 'Edit', edit_property_apartment_path(@property, apartment), class: 'btn btn-warning btn-xs' %></td>
+  <td><%= link_to 'Delete', property_apartment_path(@property, apartment), method: :delete, class: 'btn btn-danger btn-xs', id: "delete_apartment_#{apartment.id}" %></td>
 </tr>

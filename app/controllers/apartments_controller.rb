@@ -1,7 +1,7 @@
 class ApartmentsController < ApplicationController
 
   before_action :set_property, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  before_action :set_apartment, only: [:show, :edit, :update]
+  before_action :set_apartment, only: [:show, :edit, :update, :destroy]
 
   def index
     @apartments = @property.apartments
@@ -31,6 +31,12 @@ class ApartmentsController < ApplicationController
       redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} successfully updated"
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @apartment.delete
+      redirect_to property_apartments_path, notice: "Apartment #{@apartment.unit_number} successfully deleted"
     end
   end
 
