@@ -42,11 +42,8 @@ ActiveRecord::Schema.define(version: 20180430174846) do
     t.string "property_manager_email"
     t.string "state"
     t.integer "zipcode"
-    t.string "spec_a"
-    t.string "spec_b"
-    t.string "spec_c"
-    t.string "suburban"
-    t.string "urban"
+    t.string "specs"
+    t.string "secondary_spec"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
