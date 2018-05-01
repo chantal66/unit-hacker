@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430174846) do
+ActiveRecord::Schema.define(version: 20180501153018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 20180430174846) do
     t.integer "zipcode"
     t.string "specs"
     t.string "secondary_spec"
+    t.string "maintenance_manager_name"
+    t.integer "maintenance_manager_phone"
+    t.string "maintenance_manager_email"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 

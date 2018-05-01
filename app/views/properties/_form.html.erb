@@ -1,3 +1,4 @@
+<br>
 <%= form_for @property, class: 'form-horizontal' do |f| %>
   <% if @property.errors.any? %>
     <% @property.errors.full_messages.each do |error| %>
@@ -5,35 +6,44 @@
     <% end %>
   <% end %>
   <div class="form-group">
-    <%= f.label :name, class: 'col-sm-2 control-label' %>
+    <%= f.label :name, class: 'col-sm-4 control-label' %>
     <%= f.text_field :name, class: 'form-control' %>
-
-    <%= f.label :address, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :address, class: 'col-sm-4 control-label' %>
     <%= f.text_field :address, class: 'form-control' %>
-
-    <%= f.label :state, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :state, class: 'col-sm-4 control-label' %>
     <%= f.select :state, options_for_select(us_states), {},class: 'form-control' %>
-
-    <%= f.label :zipcode, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :zipcode, class: 'col-sm-4 control-label' %>
     <%= f.number_field :zipcode, class: 'form-control' %>
-
-    <%= f.label :number_of_units, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :number_of_units, class: 'col-sm-4 control-label' %>
     <%= f.number_field :number_of_units, class: 'form-control' %>
-
-    <%= f.label :property_manager_name, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :property_manager_name, class: 'col-sm-4 control-label' %>
     <%= f.text_field :property_manager_name, class: 'form-control' %>
-
-    <%= f.label :property_manager_phone, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :property_manager_phone, class: 'col-sm-4 control-label' %>
     <%= f.telephone_field :property_manager_phone, class: 'form-control' %>
-
-    <%= f.label :property_manager_email, class: 'col-sm-2 control-label' %>
+    <br>
+    <%= f.label :property_manager_email, class: 'col-sm-4 control-label' %>
     <%= f.email_field :property_manager_email, class: 'form-control' %>
     <br>
+    <%= f.label :maintenance_manager_name, class: 'col-sm-4 control-label' %>
+    <%= f.text_field :maintenance_manager_name, class: 'form-control' %>
+    <br>
+    <%= f.label :maintenance_manager_phone, class: 'col-sm-4 control-label' %>
+    <%= f.telephone_field :maintenance_manager_phone, class: 'form-control' %>
+    <br>
+    <%= f.label :maintenance_manager_email, class: 'col-sm-4 control-label' %>
+    <%= f.email_field :maintenance_manager_email, class: 'form-control' %>
+    <br>
     <h4>Unit Renovation Type</h4>
-    <%= f.label :specs, class: 'col-sm-2 control-label' %>
+    <%= f.label :specs, class: 'col-sm-4 control-label' %>
     <%= f.select :specs, options_for_select(['Spec A', 'Spec B', 'Spec C']),{} , class: 'form-control' %>
 
-    <%= f.label :secondary_spec, class: 'col-sm-2 control-label' %>
+    <%= f.label :secondary_spec, class: 'col-sm-4 control-label' %>
     <%= f.select :secondary_spec, options_for_select(['Urban', 'Suburban']),{},class: 'form-control' %>
 
 
