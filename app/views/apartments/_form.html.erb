@@ -18,7 +18,7 @@
     <%= f.select :unit_location, options_for_select(['Garden', 'Ground', 'Upper']),{} , class: 'form-control' %>
 
     <%= f.label :garage, class: 'col-sm-2 control-label' %>
-    <%= f.select :garage, options_for_select(['yes', 'no']),{}, class: 'form-control' %>
+    <%= f.select :garage, options_for_select(['Yes', 'No']),{}, class: 'form-control' %>
 
     <%= f.label :garage_number, class: 'col-sm-2 control-label' %>
     <%= f.number_field :garage_number, class: 'form-control' %>

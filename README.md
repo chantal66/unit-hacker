@@ -19,12 +19,11 @@ Tracking tool for status and construction details for apartment units.
 # Features
 - Admin Dashboard
 - User has to be signed in to use the app
-- Properties CRUD
+- Properties and apartments CRUD
 - Growl Notifications
 
 # Todo's
->* Add the complete form for creating properties
 >* setup devise login as root
 >* Import excel files to display in all properties
->* Apartments CRUD
 >* Add option for adding floorplan with pdf, jpeg.
+>* Make entire row clikable apartments#index
