@@ -28,20 +28,8 @@ class ApartmentsController < ApplicationController
   end
 
   def update
-    # respond_to do |format|
-    #   if  @apartment.update_attributes(apartment_params)
-    #     # redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} successfully updated"
-    #     format.html { redirect_to(@apartment, notice: "Apartment #{@apartment.unit_number} successfully updated")}
-    #     # respond_with @apartment
-    #     format.json { respond_with_bip(@apartment) }
-    #   else
-    #     format.html { render :edit }
-    #     format.json { respond_with_bip(@apartment) }
-    #   end
-    # end
     @apartment.update_attributes(apartment_params)
     respond_with @apartment
-
   end
 
   def destroy

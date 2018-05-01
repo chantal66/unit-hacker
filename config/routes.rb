@@ -13,6 +13,5 @@ Rails.application.routes.draw do
   resources :properties do
     resources :apartments
   end
-  # resources :apartments, only: [:show]
   root to: 'static#index'
 end
