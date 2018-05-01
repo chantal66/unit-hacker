@@ -4,7 +4,10 @@
 <h3>All Apartments from <%= @property.name %></h3>
     <div class="col-md-12">
       <table class="table table-striped table-hover">
-        <%= link_to 'New' , new_property_apartment_path, class: 'btn btn-info' %>
+        <div class="btn-group" role="group" aria-label="group">
+          <%= link_to 'Go to Properties' , properties_path, class: 'btn btn-default' %>
+          <%= link_to 'New' , new_property_apartment_path, class: 'btn btn-info' %>
+        </div>
         <thead>
         <tr>
           <th>
