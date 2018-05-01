@@ -5,8 +5,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+        <h3>Unit Details</h3>
       <div class="col-sm-10 col-sm-offset-2">
         <div class="list-group">
           <ul class="col-md-8 list-unstyled">
@@ -22,5 +23,120 @@
         </div>
       </div>
     </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <table class="table table-hover">
+          <h4>Shaker Doors</h4>
+          <thead>
+          <tr>
+            <th>
+              Qty
+            </th>
+            <th>
+              Width
+            </th>
+            <th>
+              Height
+            </th>
+            <th>
+              Hinges
+            </th>
+            <th>
+              Pulls
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <%= @apartment.shaker_doors_qty %>
+            </td>
+            <td>
+              <%= @apartment.shaker_doors_width %>
+            </td>
+            <td>
+              <%= @apartment.shaker_doors_height %>
+            </td>
+            <td>
+              <%= @apartment.shaker_doors_hinges %>
+            </td>
+            <td>
+              <%= @apartment.shaker_doors_pulls %>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <table class="table table-hover">
+          <h4>Slab Drawer Fronts</h4>
+          <thead>
+          <tr>
+            <th>
+              Qty
+            </th>
+            <th>
+              Width
+            </th>
+            <th>
+              Height
+            </th>
+            <th>
+              Knobs
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <%= @apartment.slab_drawer_fronts_qty %>
+            </td>
+            <td>
+              <%= @apartment.slab_drawer_fronts_width %>
+            </td>
+            <td>
+              <%= @apartment.slab_drawer_fronts_height %>
+            </td>
+            <td>
+              <%= @apartment.slab_drawer_fronts_knobs %>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <table class="table table-hover">
+          <h4>Hardware</h4>
+          <thead>
+          <tr>
+            <th>
+              Hinges
+            </th>
+            <th>
+              Pulls
+            </th>
+            <th>
+              Knobs
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <%= @apartment.hardware_hinges %>
+            </td>
+            <td>
+              <%= @apartment.hardware_pulls %>
+            </td>
+            <td>
+              <%= @apartment.hardware_knobs %>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
+<br>
