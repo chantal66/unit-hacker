@@ -35,11 +35,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'administrate', '~> 0.9.0'
+gem 'best_in_place', '~> 3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bourbon'
 gem 'devise', '~> 4.2'
 gem 'gritter', '~> 1.2'
-gem 'administrate', '~> 0.9.0'
-gem 'bourbon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

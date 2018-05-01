@@ -50,19 +50,19 @@
           <tbody>
           <tr>
             <td>
-              <%= @apartment.shaker_doors_qty %>
+              <%= best_in_place [@property, @apartment], :shaker_doors_qty %>
             </td>
             <td>
-              <%= @apartment.shaker_doors_width %>
+              <%= best_in_place [@property, @apartment], :shaker_doors_width %>
             </td>
             <td>
-              <%= @apartment.shaker_doors_height %>
+              <%= best_in_place [@property, @apartment], :shaker_doors_height %>
             </td>
             <td>
-              <%= @apartment.shaker_doors_hinges %>
+              <%= best_in_place [@property, @apartment], :shaker_doors_hinges %>
             </td>
             <td>
-              <%= @apartment.shaker_doors_pulls %>
+              <%= best_in_place [@property, @apartment], :shaker_doors_pulls %>
             </td>
           </tr>
           </tbody>
@@ -90,16 +90,16 @@
           <tbody>
           <tr>
             <td>
-              <%= @apartment.slab_drawer_fronts_qty %>
+              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_qty %>
             </td>
             <td>
-              <%= @apartment.slab_drawer_fronts_width %>
+              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_width %>
             </td>
             <td>
-              <%= @apartment.slab_drawer_fronts_height %>
+              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_height %>
             </td>
             <td>
-              <%= @apartment.slab_drawer_fronts_knobs %>
+              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_knobs %>
             </td>
           </tr>
           </tbody>
@@ -124,13 +124,13 @@
           <tbody>
           <tr>
             <td>
-              <%= @apartment.hardware_hinges %>
+              <%= best_in_place [@property, @apartment], :hardware_hinges %>
             </td>
             <td>
-              <%= @apartment.hardware_pulls %>
+              <%= best_in_place [@property, @apartment], :hardware_pulls %>
             </td>
             <td>
-              <%= @apartment.hardware_knobs %>
+              <%= best_in_place [@property, @apartment], :hardware_knobs %>
             </td>
           </tr>
           </tbody>

@@ -1,5 +1,6 @@
 class ApartmentsController < ApplicationController
 
+  respond_to :html, :json
   before_action :set_property, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :set_apartment, only: [:show, :edit, :update, :destroy]
 
@@ -27,11 +28,20 @@ class ApartmentsController < ApplicationController
   end
 
   def update
-    if  @apartment.update(apartment_params)
-      redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} successfully updated"
-    else
-      render :edit
-    end
+    # respond_to do |format|
+    #   if  @apartment.update_attributes(apartment_params)
+    #     # redirect_to property_apartment_path(@property, @apartment), notice: "Apartment #{@apartment.unit_number} successfully updated"
+    #     format.html { redirect_to(@apartment, notice: "Apartment #{@apartment.unit_number} successfully updated")}
+    #     # respond_with @apartment
+    #     format.json { respond_with_bip(@apartment) }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { respond_with_bip(@apartment) }
+    #   end
+    # end
+    @apartment.update_attributes(apartment_params)
+    respond_with @apartment
+
   end
 
   def destroy
@@ -51,7 +61,10 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:unit_number, :beds, :baths, :unit_location, :garage, :garage_number, :renovation_type, :floor_plan)
+    params.require(:apartment).permit(:unit_number, :beds, :baths, :unit_location, :garage, :garage_number,
+                                      :renovation_type, :floor_plan, :shaker_doors_qty, :shaker_doors_width, :shaker_doors_height,
+                                      :shaker_doors_hinges, :shaker_doors_pulls, :slab_drawer_fronts_qty, :slab_drawer_fronts_width,
+                                      :slab_drawer_fronts_height, :slab_drawer_fronts_knobs, :hardware_hinges, :hardware_pulls, :hardware_knobs)
   end
 end
 
