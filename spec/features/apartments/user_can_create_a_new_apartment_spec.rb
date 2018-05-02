@@ -17,7 +17,7 @@ describe  'New' do
     fill_in 'apartment[beds]', with: '2'
     fill_in 'apartment[baths]', with: '1'
     select 'Garden', from: 'apartment[unit_location]'
-    select 'yes', from: 'apartment[garage]'
+    select 'Yes', from: 'apartment[garage]'
     fill_in 'apartment[garage_number]', with: '10'
     select  'Full', from:  'apartment[renovation_type]'
     click_button 'Save'

@@ -9,15 +9,15 @@ Property.create!(id: 3, name: 'West lakes', user_id: @user.id)
 puts '3 properties created'
 
 10.times do
-  Apartment.create(unit_number: 102, baths: 1, beds:1, unit_location: 'garden', garage: 'yes',garage_number: 23, renovation_type: 'full', floor_plan: 'Alexandria', property_id: 1)
+  Apartment.create(unit_number: 102, baths: 1, beds:1, unit_location: 'garden', garage: 'yes',garage_number: 23, renovation_type: 'full', floor_plan: 'Alexandria', status: 'construction', ntv: Date.today, measure_date: Date.today, moveout_date: Date.today, construction_start_date: Date.today, turnover_date: Date.today, property_id: 1)
 end
 
 10.times do
-  Apartment.create(unit_number: 122, baths: 1, beds:2, unit_location: 'ground', garage: 'yes',garage_number: 11, renovation_type: 'full', floor_plan: 'Italia', property_id: 2)
+  Apartment.create(unit_number: 122, baths: 1, beds:2, unit_location: 'ground', garage: 'yes',garage_number: 11, renovation_type: 'full', floor_plan: 'Italia', status: 'construction', ntv: Date.today, measure_date: Date.today, moveout_date: Date.today, construction_start_date: Date.today, turnover_date: Date.today, property_id: 2)
 end
 
 10.times do
-  Apartment.create(unit_number: 222, baths: 2, beds:2, unit_location: 'ground', garage: 'yes',garage_number: 21, renovation_type: 'full', floor_plan: 'Barroco', property_id: 3)
+  Apartment.create(unit_number: 222, baths: 2, beds:2, unit_location: 'ground', garage: 'yes',garage_number: 21, renovation_type: 'full', floor_plan: 'Barroco', status: 'construction', ntv: Date.today, measure_date: Date.today, moveout_date: Date.today, construction_start_date: Date.today, turnover_date: Date.today, property_id: 3)
 end
 
 puts '30 apartments created'

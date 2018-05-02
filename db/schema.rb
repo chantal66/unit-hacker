@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180501170051) do
+ActiveRecord::Schema.define(version: 20180502184108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,18 +27,12 @@ ActiveRecord::Schema.define(version: 20180501170051) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "property_id"
-    t.integer "shaker_doors_qty", default: 0
-    t.integer "shaker_doors_width", default: 0
-    t.integer "shaker_doors_height", default: 0
-    t.integer "shaker_doors_hinges", default: 0
-    t.integer "shaker_doors_pulls", default: 0
-    t.integer "slab_drawer_fronts_qty", default: 0
-    t.integer "slab_drawer_fronts_width", default: 0
-    t.integer "slab_drawer_fronts_height", default: 0
-    t.integer "slab_drawer_fronts_knobs", default: 0
-    t.integer "hardware_hinges", default: 0
-    t.integer "hardware_pulls", default: 0
-    t.integer "hardware_knobs", default: 0
+    t.integer "status", default: 0
+    t.datetime "ntv"
+    t.datetime "measure_date"
+    t.datetime "moveout_date"
+    t.datetime "construction_start_date"
+    t.datetime "turnover_date"
     t.index ["property_id"], name: "index_apartments_on_property_id"
   end
 

@@ -11,132 +11,18 @@
       <div class="col-sm-10 col-sm-offset-2">
         <div class="list-group">
           <ul class="col-md-8 list-unstyled">
-            <li class="list-group-item"><strong>Unit Number: </strong><%= @apartment.unit_number %></li>
-            <li class="list-group-item"><strong>Beds: </strong> <%= @apartment.beds %></li>
-            <li class="list-group-item"><strong>Baths: </strong> <%= @apartment.baths %></li>
-            <li class="list-group-item"><strong>Unit Location: </strong> <%= @apartment.unit_location %></li>
-            <li class="list-group-item"><strong>Garage: </strong> <%= @apartment.garage %></li>
-            <li class="list-group-item"><strong>Garage Number: </strong> <%= @apartment.garage_number %></li>
-            <li class="list-group-item"><strong>Floor Plan: </strong> <%= @apartment.floor_plan %></li>
-            <li class="list-group-item"><strong>Renovation Type: </strong> <%= @apartment.renovation_type %></li>
+            <li class="list-group-item"><strong>Unit Number: </strong><%= best_in_place [@property, @apartment], :unit_number %></li>
+            <li class="list-group-item"><strong>Beds: </strong> <%= best_in_place [@property, @apartment], :beds %></li>
+            <li class="list-group-item"><strong>Baths: </strong> <%= best_in_place [@property, @apartment], :baths %></li>
+            <li class="list-group-item"><strong>Unit Location: </strong> <%= best_in_place [@property, @apartment], :unit_location, :as => :select, :collection => {"Garden" => "Garden", "Ground" => "Ground", "Upper" => "Upper" } %></li>
+            <li class="list-group-item"><strong>Garage: </strong> <%= best_in_place [@property, @apartment], :garage, as: :checkbox, :collection => %w(True False)  %></li>
+            <li class="list-group-item"><strong>Garage Number: </strong> <%= best_in_place [@property, @apartment], :garage_number %></li>
+            <li class="list-group-item"><strong>Floor Plan: </strong> <%= best_in_place [@property, @apartment], :floor_plan %></li>
+            <li class="list-group-item"><strong>Renovation Type: </strong> <%= best_in_place [@property, @apartment], :renovation_type, :as => :select, :collection => {"Full" => "Full", "Partial" => "Partial"} %></li>
           </ul>
         </div>
       </div>
     </div>
     <br>
-    <div class="row">
-      <div class="col-md-4">
-        <table class="table table-hover">
-          <h4>Shaker Doors</h4>
-          <thead>
-          <tr>
-            <th>
-              Qty
-            </th>
-            <th>
-              Width
-            </th>
-            <th>
-              Height
-            </th>
-            <th>
-              Hinges
-            </th>
-            <th>
-              Pulls
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              <%= best_in_place [@property, @apartment], :shaker_doors_qty %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :shaker_doors_width %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :shaker_doors_height %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :shaker_doors_hinges %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :shaker_doors_pulls %>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-4">
-        <table class="table table-hover">
-          <h4>Slab Drawer Fronts</h4>
-          <thead>
-          <tr>
-            <th>
-              Qty
-            </th>
-            <th>
-              Width
-            </th>
-            <th>
-              Height
-            </th>
-            <th>
-              Knobs
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_qty %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_width %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_height %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :slab_drawer_fronts_knobs %>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-4">
-        <table class="table table-hover">
-          <h4>Hardware</h4>
-          <thead>
-          <tr>
-            <th>
-              Hinges
-            </th>
-            <th>
-              Pulls
-            </th>
-            <th>
-              Knobs
-            </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              <%= best_in_place [@property, @apartment], :hardware_hinges %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :hardware_pulls %>
-            </td>
-            <td>
-              <%= best_in_place [@property, @apartment], :hardware_knobs %>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </div>
 </div>
-<br>

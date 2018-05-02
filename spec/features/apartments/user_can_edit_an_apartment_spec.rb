@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe  'Edit' do
-  it  'user can create a edit an apartment' do
+  it  'user can edit an apartment' do
     user = FactoryBot.create(:user)
     login_as(user, :scope => :user)
     property = FactoryBot.create(:property)
@@ -14,7 +14,7 @@ describe  'Edit' do
     fill_in 'apartment[beds]', with: '2'
     fill_in 'apartment[baths]', with: '2'
     select 'Ground', from: 'apartment[unit_location]'
-    select 'no', from: 'apartment[garage]'
+    select 'No', from: 'apartment[garage]'
     select  'Partial', from:  'apartment[renovation_type]'
     click_button 'Save'
 
