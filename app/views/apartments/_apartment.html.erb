@@ -3,11 +3,11 @@
   <td><%= apartment.renovation_type %></td>
   <td><%= apartment.floor_plan %></td>
   <td><%= apartment.status %></td>
-  <td><%= apartment.ntv.strftime("%m/%d/%y") %></td>
-  <td><%= apartment.measure_date.strftime("%m/%d/%y") %></td>
-  <td><%= apartment.moveout_date.strftime("%m/%d/%y") %></td>
-  <td><%= apartment.construction_start_date.strftime("%m/%d/%y") %></td>
-  <td><%= apartment.turnover_date.strftime("%m/%d/%y") %></td>
+  <td><%= format_date(apartment.ntv) %></td>
+  <td><%= format_date(apartment.measure_date) %></td>
+  <td><%= format_date(apartment.moveout_date) %></td>
+  <td><%= format_date(apartment.construction_start_date) %></td>
+  <td><%= format_date(apartment.turnover_date) %></td>
   <td><%= link_to 'Edit', edit_property_apartment_path(@property, apartment), class: 'btn btn-warning btn-xs' %></td>
   <td><%= link_to 'Delete', property_apartment_path(@property, apartment), method: :delete, class: 'btn btn-danger btn-xs', id: "delete_apartment_#{apartment.id}" %></td>
   <td><%= link_to 'Details', property_apartment_path(@property, apartment), class: 'btn btn-default btn-xs', id: "delete_apartment_#{apartment.id}" %></td>

@@ -27,7 +27,7 @@ describe  'New' do
     expect(page).to have_content('2')
     expect(page).to have_content('1')
     expect(page).to have_content('Garden')
-    expect(page).to have_content('true')
+    expect(page).to have_content('True')
     expect(page).to have_content('10')
     expect(page).to have_content('Full')
   end
