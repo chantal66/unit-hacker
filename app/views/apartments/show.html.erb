@@ -14,11 +14,11 @@
             <li class="list-group-item"><strong>Unit Number: </strong><%= best_in_place [@property, @apartment], :unit_number %></li>
             <li class="list-group-item"><strong>Beds: </strong> <%= best_in_place [@property, @apartment], :beds %></li>
             <li class="list-group-item"><strong>Baths: </strong> <%= best_in_place [@property, @apartment], :baths %></li>
-            <li class="list-group-item"><strong>Unit Location: </strong> <%= best_in_place [@property, @apartment], :unit_location, :as => :select, :collection => {"Garden" => "Garden", "Ground" => "Ground", "Upper" => "Upper" } %></li>
+            <li class="list-group-item"><strong>Unit Location: </strong> <%= best_in_place [@property, @apartment], :unit_location %></li>
             <li class="list-group-item"><strong>Garage: </strong> <%= best_in_place [@property, @apartment], :garage, as: :checkbox, :collection => %w(True False)  %></li>
             <li class="list-group-item"><strong>Garage Number: </strong> <%= best_in_place [@property, @apartment], :garage_number %></li>
             <li class="list-group-item"><strong>Floor Plan: </strong> <%= best_in_place [@property, @apartment], :floor_plan %></li>
-            <li class="list-group-item"><strong>Renovation Type: </strong> <%= best_in_place [@property, @apartment], :renovation_type, :as => :select, :collection => {"Full" => "Full", "Partial" => "Partial"} %></li>
+            <li class="list-group-item"><strong>Renovation Type: </strong> <%= best_in_place [@property, @apartment], :renovation_type %></li>
           </ul>
         </div>
       </div>

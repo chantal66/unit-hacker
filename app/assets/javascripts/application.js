@@ -23,12 +23,3 @@ $(document).ready(function() {
     /* Activating Best In Place */
     jQuery(".best_in_place").best_in_place();
 });
-
-var output = jQuery(document.createElement('form'))
-        .attr('action', 'javascript:void(0)')
-        .attr('style', 'display:inline'),
-    selected = '';
-var select_elt = jQuery(document.createElement('select'));
-select_elt.attr('class', this.inner_class !== null ? this.inner_class : '');
-var currentCollectionValue = this.collectionValue,
-    a, key, value, _i, _len, _ref;
