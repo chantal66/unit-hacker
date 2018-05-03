@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   resources :properties do
     resources :apartments
   end
-  root to: 'static#index'
+  root to: 'properties#index'
 end
