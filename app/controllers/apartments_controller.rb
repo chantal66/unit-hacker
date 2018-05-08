@@ -13,6 +13,7 @@ class ApartmentsController < ApplicationController
   end
 
   def show
+    # @aspenmaterials =
   end
 
   def edit

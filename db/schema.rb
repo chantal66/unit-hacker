@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180502184108) do
+ActiveRecord::Schema.define(version: 20180503223746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20180502184108) do
     t.datetime "construction_start_date"
     t.datetime "turnover_date"
     t.index ["property_id"], name: "index_apartments_on_property_id"
+  end
+
+  create_table "aspen_materials", force: :cascade do |t|
+    t.integer "qty"
+    t.integer "rec"
+    t.string "item"
+    t.bigint "apartment_id"
+    t.index ["apartment_id"], name: "index_aspen_materials_on_apartment_id"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -79,5 +87,6 @@ ActiveRecord::Schema.define(version: 20180502184108) do
   end
 
   add_foreign_key "apartments", "properties"
+  add_foreign_key "aspen_materials", "apartments"
   add_foreign_key "properties", "users"
 end
